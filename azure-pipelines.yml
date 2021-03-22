@@ -22,7 +22,7 @@ steps:
     goals: 'package'
 - task: Maven@3
   inputs:
-    mavenPomFile: 'Apisprng/pom.xml'
+    mavenPomFile: '$(System.DefaultWorkingDirectory)'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
