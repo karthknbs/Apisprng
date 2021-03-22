@@ -30,3 +30,10 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial (53033766-b612-45c4-8c0b-988094e03dcd)'
+    appType: 'webAppLinux'
+    WebAppName: 'Javasprngapi'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
